@@ -3,7 +3,39 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- ============================================================
+       SEO & Open Graph / Link Preview
+  ============================================================ -->
   <title>Print Shop Docs — JobFlow + Print Shop Website + Tech Stack</title>
+  <meta name="description" content="เอกสารออกแบบระบบ JobFlow SaaS, Print Shop Website PRD และ Tech Stack Comparison สำหรับธุรกิจโรงพิมพ์และรับผลิตตามสั่ง" />
+  <meta name="author" content="Print Shop Dev Team" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#2563eb" />
+
+  <!-- Open Graph (Facebook / LINE / Discord / iMessage) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Print Shop Docs" />
+  <meta property="og:title" content="Print Shop Docs — JobFlow + Print Shop Website + Tech Stack" />
+  <meta property="og:description" content="เอกสารออกแบบระบบ JobFlow SaaS, Print Shop Website PRD และ Tech Stack Comparison สำหรับธุรกิจโรงพิมพ์" />
+  <meta property="og:image" content="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwMCIgaGVpZ2h0PSI2MzAiIHZpZXdCb3g9IjAgMCAxMjAwIDYzMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iYmciIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMGYxNzJhIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjMWUzYThhIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzA4OTFiMiIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjEyMDAiIGhlaWdodD0iNjMwIiBmaWxsPSJ1cmwoI2JnKSIvPgogIDxjaXJjbGUgY3g9IjEwMDAiIGN5PSIxMDAiIHI9IjI4MCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjA1KSIvPgogIDxjaXJjbGUgY3g9IjIwMCIgY3k9IjU1MCIgcj0iMjAwIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMDMpIi8+CiAgPHRleHQgeD0iNjAiIHk9IjE2MCIgZm9udC1mYW1pbHk9IkludGVyLEFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iOTYiIGZvbnQtd2VpZ2h0PSI5MDAiIGZpbGw9IndoaXRlIiBsZXR0ZXItc3BhY2luZz0iLTQiPvCfk6ggUHJpbnQgU2hvcCBEb2NzPC90ZXh0PgogIDx0ZXh0IHg9IjYyIiB5PSIyNDAiIGZvbnQtZmFtaWx5PSJJbnRlcixBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjM2IiBmb250LXdlaWdodD0iNDAwIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuNzUpIj5Kb2JGbG93IFNhYVMgwrcgUHJpbnQgU2hvcCBXZWJzaXRlIMK3IFRlY2ggU3RhY2s8L3RleHQ+CiAgPHJlY3QgeD0iNjAiIHk9IjMwMCIgd2lkdGg9IjE2MCIgaGVpZ2h0PSI0OCIgcng9IjI0IiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMTUpIi8+CiAgPHRleHQgeD0iODgiIHk9IjMzMiIgZm9udC1mYW1pbHk9IkludGVyLEFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTgiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IndoaXRlIj5Kb2JGbG93PC90ZXh0PgogIDxyZWN0IHg9IjIzNiIgeT0iMzAwIiB3aWR0aD0iMTcwIiBoZWlnaHQ9IjQ4IiByeD0iMjQiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4xNSkiLz4KICA8dGV4dCB4PSIyNjAiIHk9IjMzMiIgZm9udC1mYW1pbHk9IkludGVyLEFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTgiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IndoaXRlIj5QcmludCBTaG9wPC90ZXh0PgogIDxyZWN0IHg9IjQyMiIgeT0iMzAwIiB3aWR0aD0iMTYwIiBoZWlnaHQ9IjQ4IiByeD0iMjQiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4xNSkiLz4KICA8dGV4dCB4PSI0NTAiIHk9IjMzMiIgZm9udC1mYW1pbHk9IkludGVyLEFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTgiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IndoaXRlIj5UZWNoIFN0YWNrPC90ZXh0PgogIDx0ZXh0IHg9IjYwIiB5PSI1ODAiIGZvbnQtZmFtaWx5PSJJbnRlcixBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjI0IiBmb250LXdlaWdodD0iNDAwIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuNSkiPk5leHQuanMgwrcgTmVzdEpTIMK3IFBvc3RncmVTUUwgwrcgRG9ja2VyPC90ZXh0Pgo8L3N2Zz4=" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/svg+xml" />
+  <meta property="og:locale" content="th_TH" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Print Shop Docs — JobFlow + Print Shop Website + Tech Stack" />
+  <meta name="twitter:description" content="เอกสารออกแบบระบบ JobFlow SaaS, Print Shop Website PRD และ Tech Stack Comparison" />
+  <meta name="twitter:image" content="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwMCIgaGVpZ2h0PSI2MzAiIHZpZXdCb3g9IjAgMCAxMjAwIDYzMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iYmciIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMGYxNzJhIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjMWUzYThhIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzA4OTFiMiIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjEyMDAiIGhlaWdodD0iNjMwIiBmaWxsPSJ1cmwoI2JnKSIvPgogIDxjaXJjbGUgY3g9IjEwMDAiIGN5PSIxMDAiIHI9IjI4MCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjA1KSIvPgogIDxjaXJjbGUgY3g9IjIwMCIgY3k9IjU1MCIgcj0iMjAwIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMDMpIi8+CiAgPHRleHQgeD0iNjAiIHk9IjE2MCIgZm9udC1mYW1pbHk9IkludGVyLEFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iOTYiIGZvbnQtd2VpZ2h0PSI5MDAiIGZpbGw9IndoaXRlIiBsZXR0ZXItc3BhY2luZz0iLTQiPvCfk6ggUHJpbnQgU2hvcCBEb2NzPC90ZXh0PgogIDx0ZXh0IHg9IjYyIiB5PSIyNDAiIGZvbnQtZmFtaWx5PSJJbnRlcixBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjM2IiBmb250LXdlaWdodD0iNDAwIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuNzUpIj5Kb2JGbG93IFNhYVMgwrcgUHJpbnQgU2hvcCBXZWJzaXRlIMK3IFRlY2ggU3RhY2s8L3RleHQ+CiAgPHJlY3QgeD0iNjAiIHk9IjMwMCIgd2lkdGg9IjE2MCIgaGVpZ2h0PSI0OCIgcng9IjI0IiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMTUpIi8+CiAgPHRleHQgeD0iODgiIHk9IjMzMiIgZm9udC1mYW1pbHk9IkludGVyLEFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTgiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IndoaXRlIj5Kb2JGbG93PC90ZXh0PgogIDxyZWN0IHg9IjIzNiIgeT0iMzAwIiB3aWR0aD0iMTcwIiBoZWlnaHQ9IjQ4IiByeD0iMjQiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4xNSkiLz4KICA8dGV4dCB4PSIyNjAiIHk9IjMzMiIgZm9udC1mYW1pbHk9IkludGVyLEFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTgiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IndoaXRlIj5QcmludCBTaG9wPC90ZXh0PgogIDxyZWN0IHg9IjQyMiIgeT0iMzAwIiB3aWR0aD0iMTYwIiBoZWlnaHQ9IjQ4IiByeD0iMjQiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4xNSkiLz4KICA8dGV4dCB4PSI0NTAiIHk9IjMzMiIgZm9udC1mYW1pbHk9IkludGVyLEFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTgiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IndoaXRlIj5UZWNoIFN0YWNrPC90ZXh0PgogIDx0ZXh0IHg9IjYwIiB5PSI1ODAiIGZvbnQtZmFtaWx5PSJJbnRlcixBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjI0IiBmb250LXdlaWdodD0iNDAwIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuNSkiPk5leHQuanMgwrcgTmVzdEpTIMK3IFBvc3RncmVTUUwgwrcgRG9ja2VyPC90ZXh0Pgo8L3N2Zz4=" />
+
+  <!-- Security Headers (HTTP-equivalent via meta) -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
+  <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=()" />
   <style>
     :root {
       --bg: #f5f7fb;
@@ -254,15 +286,262 @@
       .document-grid { display: block; }
       #jf-en-panel, #ps-en-panel { page-break-before: always; }
     }
+
+    /* ============================================================
+       SCROLL PROGRESS BAR
+    ============================================================ */
+    #scroll-progress {
+      position: fixed; top: 0; left: 0; z-index: 9999;
+      height: 3px; width: 0%;
+      background: linear-gradient(90deg, #2563eb, #06b6d4, #7c3aed);
+      transition: width .1s linear;
+      border-radius: 0 2px 2px 0;
+    }
+
+    /* ============================================================
+       MOBILE HAMBURGER
+    ============================================================ */
+    .hamburger-btn {
+      display: none;
+      position: fixed; top: 14px; right: 16px; z-index: 1100;
+      width: 44px; height: 44px;
+      background: rgba(255,255,255,.95); backdrop-filter: blur(12px);
+      border: 1px solid var(--line); border-radius: 12px;
+      cursor: pointer; padding: 0;
+      box-shadow: 0 4px 18px rgba(15,23,42,.12);
+      flex-direction: column; align-items: center; justify-content: center; gap: 5px;
+    }
+    .hamburger-btn span {
+      display: block; width: 20px; height: 2px;
+      background: var(--ink); border-radius: 2px;
+      transition: all .25s cubic-bezier(.4,0,.2,1);
+    }
+    .hamburger-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger-btn.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .hamburger-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    .sidebar-overlay {
+      display: none; position: fixed; inset: 0; z-index: 1050;
+      background: rgba(15,23,42,.5); backdrop-filter: blur(4px);
+    }
+    .sidebar-overlay.open { display: block; }
+
+    @media (max-width: 900px) {
+      .hamburger-btn { display: flex; }
+      .sidebar {
+        position: fixed !important; top: 0; left: 0; z-index: 1080;
+        width: min(320px, 88vw); height: 100vh;
+        transform: translateX(-110%);
+        transition: transform .3s cubic-bezier(.4,0,.2,1);
+        border-right: 1px solid var(--line);
+        box-shadow: 8px 0 40px rgba(15,23,42,.18);
+      }
+      .sidebar.mobile-open { transform: translateX(0); }
+      .app { grid-template-columns: 1fr; }
+      .main { padding: 18px; }
+      .document-grid { grid-template-columns: 1fr !important; }
+      .pros-cons { grid-template-columns: 1fr; }
+    }
+
+    /* ============================================================
+       BACK TO TOP
+    ============================================================ */
+    #back-to-top {
+      position: fixed; bottom: 28px; right: 24px; z-index: 900;
+      width: 44px; height: 44px;
+      background: var(--primary); color: white;
+      border: none; border-radius: 14px; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 8px 24px rgba(37,99,235,.35);
+      opacity: 0; transform: translateY(12px) scale(.9);
+      transition: all .25s cubic-bezier(.4,0,.2,1);
+      pointer-events: none;
+    }
+    #back-to-top.visible { opacity: 1; transform: translateY(0) scale(1); pointer-events: auto; }
+    #back-to-top:hover { background: var(--primary-dark); transform: translateY(-2px) scale(1.05); }
+    #back-to-top svg { width: 18px; height: 18px; }
+
+    /* ============================================================
+       TOAST NOTIFICATION
+    ============================================================ */
+    #toast-container {
+      position: fixed; top: 20px; left: 50%; transform: translateX(-50%);
+      z-index: 9998; display: flex; flex-direction: column; gap: 10px;
+      pointer-events: none;
+    }
+    .toast {
+      display: flex; align-items: center; gap: 10px;
+      padding: 12px 18px; border-radius: 14px;
+      background: rgba(15,23,42,.92); backdrop-filter: blur(16px);
+      color: white; font-size: 13.5px; font-weight: 600;
+      box-shadow: 0 12px 36px rgba(0,0,0,.25);
+      border: 1px solid rgba(255,255,255,.1);
+      opacity: 0; transform: translateY(-8px) scale(.96);
+      transition: all .3s cubic-bezier(.4,0,.2,1);
+      pointer-events: auto; white-space: nowrap;
+    }
+    .toast.show { opacity: 1; transform: translateY(0) scale(1); }
+    .toast.info .toast-icon { color: #06b6d4; }
+    .toast.warn .toast-icon { color: #f59e0b; }
+    .toast.error { border-color: rgba(220,38,38,.35); }
+    .toast.error .toast-icon { color: #f87171; }
+    .toast-icon { font-size: 16px; flex-shrink: 0; }
+
+    /* ============================================================
+       SECURITY SHIELD BADGE (sidebar)
+    ============================================================ */
+    .security-badge {
+      display: flex; align-items: center; gap: 8px;
+      margin: 12px 8px 0;
+      padding: 10px 12px; border-radius: 12px;
+      background: linear-gradient(135deg, #f0fdf4, #dcfce7);
+      border: 1px solid #bbf7d0;
+      font-size: 12px; color: #166534; font-weight: 700;
+    }
+    .security-badge .shield { font-size: 16px; animation: pulse-shield 3s ease-in-out infinite; }
+    @keyframes pulse-shield {
+      0%,100% { opacity: 1; } 50% { opacity: .6; }
+    }
+    .security-badge .badge-label { flex: 1; line-height: 1.3; }
+    .security-badge .badge-label small { display: block; font-weight: 400; color: #166534; opacity: .75; font-size: 10.5px; }
+    .security-dot { width: 7px; height: 7px; border-radius: 50%; background: #16a34a; box-shadow: 0 0 0 2px rgba(22,163,74,.25); animation: blink-dot 2s ease-in-out infinite; }
+    @keyframes blink-dot { 0%,100%{ opacity:1; } 50%{ opacity:.3; } }
+
+    /* ============================================================
+       SECURITY WARNING MODAL
+    ============================================================ */
+    #sec-modal-overlay {
+      display: none; position: fixed; inset: 0; z-index: 9990;
+      background: rgba(15,23,42,.82); backdrop-filter: blur(8px);
+      align-items: center; justify-content: center;
+    }
+    #sec-modal-overlay.open { display: flex; }
+    #sec-modal {
+      background: #fff; border-radius: 24px; padding: 36px 40px;
+      max-width: 420px; width: 90%; text-align: center;
+      box-shadow: 0 24px 64px rgba(15,23,42,.3);
+      border: 1px solid rgba(220,38,38,.2);
+      animation: modal-in .3s cubic-bezier(.4,0,.2,1);
+    }
+    @keyframes modal-in { from { opacity:0; transform: scale(.92) translateY(12px); } to { opacity:1; transform: scale(1) translateY(0); } }
+    #sec-modal .shield-big { font-size: 52px; margin-bottom: 12px; display: block; }
+    #sec-modal h2 { margin: 0 0 8px; font-size: 20px; color: #0f172a; }
+    #sec-modal p { margin: 0 0 20px; color: #64748b; font-size: 14px; line-height: 1.65; }
+    #sec-modal button {
+      background: var(--primary); color: white; border: none;
+      padding: 12px 28px; border-radius: 999px; font-size: 14px;
+      font-weight: 700; cursor: pointer; transition: .15s;
+    }
+    #sec-modal button:hover { background: var(--primary-dark); }
+
+    /* ============================================================
+       ENHANCED SIDEBAR BRAND
+    ============================================================ */
+    .brand-logo {
+      display: flex; align-items: center; gap: 10px; margin-bottom: 4px;
+    }
+    .brand-logo-icon {
+      width: 38px; height: 38px; border-radius: 10px;
+      background: linear-gradient(135deg, #2563eb, #06b6d4);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px; flex-shrink: 0;
+      box-shadow: 0 4px 12px rgba(37,99,235,.3);
+    }
+
+    /* ============================================================
+       COPY PROTECTION OVERLAY (selectable but watermarked)
+    ============================================================ */
+    .copy-notice {
+      display: none; position: fixed;
+      bottom: 80px; left: 50%; transform: translateX(-50%);
+      z-index: 8000; pointer-events: none;
+    }
+    .copy-notice.show {
+      display: block;
+      animation: fade-notice 2.5s ease-in-out forwards;
+    }
+    @keyframes fade-notice {
+      0%   { opacity: 0; transform: translateX(-50%) translateY(4px); }
+      15%  { opacity: 1; transform: translateX(-50%) translateY(0); }
+      75%  { opacity: 1; }
+      100% { opacity: 0; transform: translateX(-50%) translateY(-4px); }
+    }
+    .copy-notice-inner {
+      background: rgba(15,23,42,.88); color: white; border-radius: 12px;
+      padding: 10px 18px; font-size: 13px; font-weight: 600;
+      display: flex; align-items: center; gap: 8px;
+      backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,.12);
+      white-space: nowrap;
+    }
+
+    /* ============================================================
+       IMPROVED MOBILE TOOLBAR
+    ============================================================ */
+    @media (max-width: 640px) {
+      .toolbar { padding: 10px 12px; }
+      .toolbar .buttons { gap: 5px; }
+      .toolbar .buttons button { font-size: 11.5px; padding: 6px 10px; }
+      .hint { display: none; }
+      .hero { padding: 28px 22px; border-radius: 20px; }
+      .hero h1 { font-size: clamp(22px,7vw,36px); }
+      #back-to-top { bottom: 18px; right: 16px; }
+    }
   </style>
 </head>
 <body>
+
+<!-- Scroll progress bar -->
+<div id="scroll-progress"></div>
+
+<!-- Toast notification container -->
+<div id="toast-container" aria-live="polite"></div>
+
+<!-- Back to top -->
+<button id="back-to-top" aria-label="กลับขึ้นด้านบน" title="กลับขึ้นด้านบน">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="18 15 12 9 6 15"></polyline>
+  </svg>
+</button>
+
+<!-- Copy notice -->
+<div class="copy-notice" id="copy-notice">
+  <div class="copy-notice-inner">🔒 เนื้อหานี้เป็นเอกสารภายใน — Print Shop Docs</div>
+</div>
+
+<!-- Mobile sidebar overlay -->
+<div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+<!-- Mobile hamburger -->
+<button class="hamburger-btn" id="hamburger-btn" aria-label="เปิดเมนู" aria-expanded="false">
+  <span></span><span></span><span></span>
+</button>
+
+<!-- Security warning modal -->
+<div id="sec-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="sec-modal-title">
+  <div id="sec-modal">
+    <span class="shield-big">🛡️</span>
+    <h2 id="sec-modal-title">ตรวจพบกิจกรรมที่น่าสงสัย</h2>
+    <p>ระบบตรวจพบการพยายามตรวจสอบซอร์สโค้ดหรือเครื่องมือ Developer<br/>เอกสารนี้เป็นข้อมูลภายในองค์กร กรุณาปิด Developer Tools</p>
+    <button id="sec-modal-ok">รับทราบ</button>
+  </div>
+</div>
+
 <div class="app">
   <!-- ===== SIDEBAR ===== -->
   <aside class="sidebar">
     <div class="brand">
-      <h1>🖨️ Print Shop Docs</h1>
-      <p>JobFlow SaaS · Print Shop Website · Tech Stack<br/>เอกสารรวม 3 โปรเจกต์</p>
+      <div class="brand-logo">
+        <div class="brand-logo-icon">🖨️</div>
+        <div>
+          <h1 style="margin:0;font-size:16px;line-height:1.2;letter-spacing:-0.03em;color:#0f172a;">Print Shop Docs</h1>
+          <p style="margin:2px 0 0;color:var(--muted);font-size:11px;line-height:1.4;">Internal · v2.0</p>
+        </div>
+      </div>
+      <div class="security-badge">
+        <span class="shield">🛡️</span>
+        <div class="badge-label">Protected Document<small>Web Security Enabled</small></div>
+        <div class="security-dot"></div>
+      </div>
     </div>
 
     <!-- Doc switcher tabs -->
@@ -6309,9 +6588,265 @@ media_files                site_settings
 </div>
 
 <script>
-  // ============================================
-  // Tab switching
-  // ============================================
+  /* ============================================================
+     SECURITY MODULE
+     — DevTools detection
+     — Right-click / keyboard shortcut protection
+     — Copy watermarking
+     — Rate-limit suspicious interactions
+  ============================================================ */
+  (function SecurityModule() {
+    'use strict';
+
+    // --- DevTools Detection ---
+    let devtoolsOpen = false;
+    let devtoolsWarnShown = false;
+
+    function checkDevTools() {
+      const threshold = 160;
+      const widthDiff  = window.outerWidth  - window.innerWidth;
+      const heightDiff = window.outerHeight - window.innerHeight;
+      const isOpen = widthDiff > threshold || heightDiff > threshold;
+      if (isOpen && !devtoolsOpen) {
+        devtoolsOpen = true;
+        if (!devtoolsWarnShown) {
+          devtoolsWarnShown = true;
+          document.getElementById('sec-modal-overlay').classList.add('open');
+          showToast('🛡️ DevTools ถูกตรวจจับ', 'warn');
+          logSecEvent('devtools_open');
+        }
+      } else if (!isOpen && devtoolsOpen) {
+        devtoolsOpen = false;
+      }
+    }
+
+    // Poll every 1.5s — lightweight
+    setInterval(checkDevTools, 1500);
+
+    // Debugger-based detection (fires only when DevTools console is open)
+    try {
+      (function dt() {
+        const s = new Error();
+        Object.defineProperty(s, 'stack', {
+          get: function() {
+            devtoolsOpen = true;
+            return '';
+          }
+        });
+        // eslint-disable-next-line no-console
+        console.debug(s);
+      })();
+    } catch(e) {}
+
+    // --- Block F12 / Ctrl+Shift+I / Ctrl+Shift+J / Ctrl+U ---
+    const BLOCKED_KEYS = new Set(['F12','F5']);
+    const BLOCKED_COMBOS = [
+      { ctrl: true,  shift: true, key: 'I' },
+      { ctrl: true,  shift: true, key: 'J' },
+      { ctrl: true,  shift: true, key: 'C' },
+      { ctrl: true,  shift: true, key: 'K' },
+      { ctrl: true,  key: 'U' },
+      { ctrl: true,  key: 'S' },
+    ];
+
+    document.addEventListener('keydown', function(e) {
+      const up = e.key.toUpperCase();
+      if (BLOCKED_KEYS.has(e.key)) {
+        e.preventDefault(); e.stopPropagation();
+        showToast('⛔ คีย์นี้ถูกปิดใช้งาน', 'warn');
+        logSecEvent('blocked_key_' + e.key);
+        return false;
+      }
+      for (const combo of BLOCKED_COMBOS) {
+        const ctrlMatch  = !combo.ctrl  || (e.ctrlKey || e.metaKey);
+        const shiftMatch = !combo.shift || e.shiftKey;
+        const keyMatch   = combo.key   === up;
+        if (ctrlMatch && shiftMatch && keyMatch) {
+          e.preventDefault(); e.stopPropagation();
+          showToast('⛔ ปิดใช้งานการดูซอร์สโค้ด', 'warn');
+          logSecEvent('blocked_combo_ctrl+' + (combo.shift ? 'shift+' : '') + combo.key);
+          return false;
+        }
+      }
+    }, true);
+
+    // --- Disable right-click context menu ---
+    document.addEventListener('contextmenu', function(e) {
+      e.preventDefault();
+      showToast('🔒 เมนูคลิกขวาถูกปิดใช้งาน', 'info');
+      logSecEvent('right_click_blocked');
+      return false;
+    });
+
+    // --- Copy watermarking ---
+    document.addEventListener('copy', function(e) {
+      const selected = window.getSelection ? window.getSelection().toString() : '';
+      if (selected && selected.length > 0) {
+        const watermarked = selected + '\n\n— เนื้อหาจาก Print Shop Docs (Internal Document) —';
+        if (e.clipboardData) {
+          e.clipboardData.setData('text/plain', watermarked);
+          e.preventDefault();
+        }
+        showCopyNotice();
+        logSecEvent('copy_watermarked', selected.length + ' chars');
+      }
+    });
+
+    // --- Prevent drag of images/text ---
+    document.addEventListener('dragstart', function(e) {
+      e.preventDefault(); return false;
+    });
+
+    // --- Print protection: warn before printing ---
+    window.addEventListener('beforeprint', function() {
+      logSecEvent('print_attempt');
+    });
+
+    // --- Rate-limit rapid clicks (bot / scraper detection) ---
+    let clickCount = 0;
+    let clickTimer = null;
+    document.addEventListener('click', function() {
+      clickCount++;
+      if (clickCount > 25) {
+        showToast('⚠️ ตรวจพบการคลิกผิดปกติ กรุณาชะลอการใช้งาน', 'warn');
+        logSecEvent('rapid_click_detected', clickCount);
+        clickCount = 0;
+      }
+      clearTimeout(clickTimer);
+      clickTimer = setTimeout(() => { clickCount = 0; }, 3000);
+    }, true);
+
+    // --- Session integrity: detect tab-duplication / iframe embedding ---
+    if (window.self !== window.top) {
+      document.body.innerHTML = '<div style="display:flex;align-items:center;justify-content:center;height:100vh;font-family:sans-serif;color:#dc2626;flex-direction:column;gap:16px;"><span style="font-size:64px">🛡️</span><h2 style="margin:0">เอกสารนี้ไม่อนุญาตให้ฝังใน iframe</h2></div>';
+      logSecEvent('iframe_embed_blocked');
+    }
+
+    // --- Security event logger ---
+    const secLog = [];
+    function logSecEvent(type, detail) {
+      const entry = { ts: new Date().toISOString(), type, detail: detail || null };
+      secLog.push(entry);
+      // In production: send to your logging endpoint
+      // fetch('/api/security-log', { method: 'POST', body: JSON.stringify(entry) });
+    }
+
+    // Expose read-only log to authorized console (won't help without DevTools open)
+    Object.defineProperty(window, '__secLog', {
+      get: function() { return JSON.parse(JSON.stringify(secLog)); },
+      configurable: false
+    });
+
+    // Modal dismiss
+    document.getElementById('sec-modal-ok').addEventListener('click', function() {
+      document.getElementById('sec-modal-overlay').classList.remove('open');
+    });
+    document.getElementById('sec-modal-overlay').addEventListener('click', function(e) {
+      if (e.target === this) this.classList.remove('open');
+    });
+
+  })(); // end SecurityModule
+
+
+  /* ============================================================
+     TOAST SYSTEM
+  ============================================================ */
+  function showToast(message, type) {
+    type = type || 'info';
+    const icons = { info: 'ℹ️', warn: '⚠️', error: '🚫' };
+    const container = document.getElementById('toast-container');
+    const toast = document.createElement('div');
+    toast.className = 'toast ' + type;
+    toast.innerHTML = '<span class="toast-icon">' + (icons[type] || 'ℹ️') + '</span><span>' + message + '</span>';
+    container.appendChild(toast);
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => { toast.classList.add('show'); });
+    });
+    setTimeout(() => {
+      toast.classList.remove('show');
+      setTimeout(() => { if (toast.parentNode) toast.parentNode.removeChild(toast); }, 400);
+    }, 3200);
+  }
+
+  function showCopyNotice() {
+    const n = document.getElementById('copy-notice');
+    n.classList.remove('show');
+    void n.offsetWidth; // reflow
+    n.classList.add('show');
+    setTimeout(() => n.classList.remove('show'), 2600);
+  }
+
+
+  /* ============================================================
+     SCROLL PROGRESS BAR
+  ============================================================ */
+  (function() {
+    const bar = document.getElementById('scroll-progress');
+    function updateBar() {
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+      const docH = document.documentElement.scrollHeight - window.innerHeight;
+      const pct = docH > 0 ? (scrollTop / docH) * 100 : 0;
+      bar.style.width = Math.min(100, pct) + '%';
+    }
+    window.addEventListener('scroll', updateBar, { passive: true });
+  })();
+
+
+  /* ============================================================
+     BACK TO TOP
+  ============================================================ */
+  (function() {
+    const btn = document.getElementById('back-to-top');
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 400) btn.classList.add('visible');
+      else btn.classList.remove('visible');
+    }, { passive: true });
+    btn.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  })();
+
+
+  /* ============================================================
+     MOBILE HAMBURGER MENU
+  ============================================================ */
+  (function() {
+    const hamburger = document.getElementById('hamburger-btn');
+    const sidebar   = document.querySelector('.sidebar');
+    const overlay   = document.getElementById('sidebar-overlay');
+
+    function openSidebar() {
+      sidebar.classList.add('mobile-open');
+      overlay.classList.add('open');
+      hamburger.classList.add('open');
+      hamburger.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeSidebar() {
+      sidebar.classList.remove('mobile-open');
+      overlay.classList.remove('open');
+      hamburger.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+
+    hamburger.addEventListener('click', function() {
+      sidebar.classList.contains('mobile-open') ? closeSidebar() : openSidebar();
+    });
+    overlay.addEventListener('click', closeSidebar);
+
+    // Close on nav link tap (mobile UX)
+    document.querySelectorAll('.toc a').forEach(function(a) {
+      a.addEventListener('click', function() {
+        if (window.innerWidth <= 900) closeSidebar();
+      });
+    });
+  })();
+
+
+  /* ============================================================
+     TAB SWITCHING
+  ============================================================ */
   const mainWrap = document.getElementById('main-wrap');
   const tabContents = document.querySelectorAll('.tab-content');
   const docTabBtns = document.querySelectorAll('.doc-tab-btn');
@@ -6322,47 +6857,40 @@ media_files                site_settings
   };
 
   function switchDoc(target) {
-    // Show/hide content
     tabContents.forEach(el => el.style.display = 'none');
     const active = document.getElementById('content-' + target);
     if (active) active.style.display = 'block';
 
-    // Show/hide TOCs
     Object.entries(tocDivs).forEach(([k, el]) => {
       el.style.display = k === target ? 'block' : 'none';
     });
 
-    // Update tab button styles
     docTabBtns.forEach(btn => {
       btn.className = 'doc-tab-btn';
       if (btn.dataset.target === target) btn.classList.add('active-' + target);
     });
 
     localStorage.setItem('active-doc', target);
-
-    // Scroll main to top
     mainWrap.scrollTop = 0;
     window.scrollTo(0, 0);
   }
 
   docTabBtns.forEach(btn => btn.addEventListener('click', () => switchDoc(btn.dataset.target)));
 
-  // ============================================
-  // Language mode (per container)
-  // ============================================
+
+  /* ============================================================
+     LANGUAGE MODE
+  ============================================================ */
   function setLangMode(container, mode) {
     const cont = document.getElementById('content-' + container);
     if (!cont) return;
-    // Remove existing mode classes
     cont.classList.remove('mode-both','mode-th','mode-en');
     cont.classList.add('mode-' + mode);
 
-    // Update buttons within this container
     cont.querySelectorAll('[data-mode][data-container="' + container + '"]').forEach(btn => {
       btn.classList.toggle('active', btn.dataset.mode === mode);
     });
 
-    // Update TOC links for language
     const tocLinks = document.querySelectorAll('#toc-' + container + '-links a');
     tocLinks.forEach(a => {
       if (mode === 'en') a.setAttribute('href', a.dataset.en || a.getAttribute('href'));
@@ -6376,9 +6904,10 @@ media_files                site_settings
     btn.addEventListener('click', () => setLangMode(btn.dataset.container, btn.dataset.mode));
   });
 
-  // ============================================
-  // Init
-  // ============================================
+
+  /* ============================================================
+     INIT
+  ============================================================ */
   const savedDoc = localStorage.getItem('active-doc') || 'jf';
   switchDoc(savedDoc);
 
@@ -6386,6 +6915,10 @@ media_files                site_settings
     const saved = localStorage.getItem('lang-mode-' + c) || 'both';
     setLangMode(c, saved);
   });
+
+  // Welcome security toast
+  setTimeout(() => showToast('🛡️ Protected Document — Security Active', 'info'), 800);
+
 </script>
 </body>
 </html>
